@@ -33,4 +33,20 @@ export const testimonialsDb = [
     name: "Emily Davis",
     role: "Student",
   },
+    {
+    id: 5,
+    text: `Explore expertly designed programs to boost your skills and
+           knowledge. Experience quality learning with engaging sessions and
+           practical guidance.`,
+    name: "Emily Davis",
+    role: "Student",
+  },
+    {
+    id: 6,
+    text: `Explore expertly designed programs to boost your skills and
+           knowledge. Experience quality learning with engaging sessions and
+           practical guidance.`,
+    name: "Emily Davis",
+    role: "Student",
+  },
 ];

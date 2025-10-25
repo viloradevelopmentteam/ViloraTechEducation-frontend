@@ -1,5 +1,5 @@
 import React from "react";
-import Aboutbg from "../../../../public/assets/Aboutbg.jpg";
+import Logobg from "../../../../public/assets/Logo.png";
 import AboutImg1 from "../../../../public/assets/AboutStudent1.jpg";
 import AboutImg2 from "../../../../public/assets/AboutStudent2.jpg";
 import LineImg from "../../../../public/assets/LineImg.png";
@@ -8,7 +8,7 @@ export const aboutDb = [
     {
         id: 1,
         title: "About Us",
-        Bg: Aboutbg,
+        Logo: Logobg,
         images: [AboutImg1, AboutImg2],
         Content1: `We are dedicated to providing quality education that inspires learning and personal growth. Our institution believes in developing not just academic excellence, but also leadership and creativity among students.
                   Join us in our mission to shape a brighter and smarter future through knowledge and innovation.

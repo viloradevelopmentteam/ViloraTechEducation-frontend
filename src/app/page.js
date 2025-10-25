@@ -9,13 +9,35 @@ import Testimonials from "./components/Testimonials";
 export default function Home() {
   return (
     <div className="bg-sky-100 ">
+
       <Navbar />
-      <Herosection />
+              <div id="Home">
+                <Herosection />
+              </div>
+
+<div id="courses">
       <CardTypes />
+</div>
+
+<div id="Mission & Vision">
       <MissionVision />
+
+</div>
+<div id="AboutUs">
       <AboutUs />
+
+</div>
+<div>
       <Testimonials />
+
+</div>
+<div>
       <Footer />
+
+</div>
+
+
+
 
 
     </div>

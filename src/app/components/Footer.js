@@ -70,7 +70,7 @@ const Footer = () => {
 
       <div className="flex font-bol text-[15px] mt-5 hover:underline hover:text-blue-400">
         © {new Date().getFullYear()} || All rights reserved.
-        {/* ViloraTech Education.com  */}
+        ViloraTech Education.com 
       </div>
     </div>
   );
