@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata = {
   title: "Vilora Tech Education | AI, Software & Multimedia Training Institute",
@@ -51,6 +52,14 @@ export const metadata = {
     "Online tech courses",
     "Professional certification courses",
   ],
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
+    googleBot: "index, follow"
+  },
   authors: [{ name: "Vilora Tech Education", url: "https://viloratecheducation.com" }],
   metadataBase: new URL("https://viloratecheducation.com"),
   openGraph: {
@@ -61,7 +70,7 @@ export const metadata = {
     siteName: "Vilora Tech Education",
     images: [
       {
-        url: "../../public/assets/LOGO.jpg",
+        url: "/assets/LOGO.jpg",
         width: 1200,
         height: 630,
         alt: "Vilora Tech Education – AI & Multimedia Courses",
@@ -75,7 +84,7 @@ export const metadata = {
     title: "Vilora Tech Education | AI, Software & Multimedia Courses",
     description:
       "Enhance your career with Vilora Tech’s hands-on training in AI, Software, Multimedia, Accounts, and English.",
-    images: ["../../public/assets/LOGO.jpg"],
+    images: ["/assets/LOGO.jpg"],
     creator: "@ViloraTech",
   },
   alternates: {
@@ -85,13 +94,34 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      
+  <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-YHBB3SEGP2"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YHBB3SEGP2');
+          `}
+        </Script>
+      
       <body>
         {/* Favicons and manifest */}
-        <link rel="apple-touch-icon" sizes="180x180" href="../../src/app/apple-touch-icon.png" />
+        {/* <link rel="apple-touch-icon" sizes="180x180" href="../../src/app/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="../../src/app/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="../../src/app/favicon-16x16.png" />
-        <link rel="manifest" href="../../src/app/site.webmanifest" />
+        <link rel="manifest" href="../../src/app/site.webmanifest" /> */}
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
 
         {/* Schema.org JSON-LD for rich snippets */}
         <script
@@ -113,7 +143,14 @@ export default function RootLayout({ children }) {
 
 //               Address: 1st Floor, 62, Vallalar Salai Rd, Venkata Nagar, Puducherry, 605011
 // Phone: 086103 91458
+
               address: {
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 11.9413258,
+                  "longitude": 79.8217365
+                }
+                ,
                 "@type": "PostalAddress",
                 streetAddress: "1st Floor, 62, Vallalar Salai Rd, Venkata Nagar",
                 addressLocality: "Puducherry",

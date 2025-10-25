@@ -104,6 +104,29 @@ export default function Navbar() {
   const toggleForm = () => {
     setShowForm(!showForm);
   };
+// Example using fetch
+const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+
+    try {
+      await fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSf4Kc0u6IwbdaOVPy-uDPuMsgr9ef1N11rPqrXdr3MKtogIig/formResponse",
+        {
+          method: "POST",
+          body: formData,
+          mode: "no-cors", // necessary to bypass CORS
+        }
+      );
+
+      alert("✅ Enquiry submitted successfully!");
+      e.target.reset();
+    } catch (error) {
+      console.error("Error submitting form", error);
+      alert("❌ Failed to submit. Try again later.");
+    }
+  };
 
   return (
     <>
@@ -217,23 +240,27 @@ export default function Navbar() {
               </button>
             </div>
 
-            <form className="flex flex-col gap-4">
+            <form className="flex flex-col gap-4" onSubmit={ handleSubmit}>
               <input
                 type="text"
                 placeholder="Your Name"
+                name="entry.2050310110"
                 className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700"
               />
               <input
                 type="email"
+                name="entry.1252054791"
                 placeholder="Your Email"
                 className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700"
               />
               <input
-                type="number"
+                type="text"
+                name="entry.657967908"
                 placeholder="Phone Number"
                 className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700"
               />
               <textarea
+                name="entry.156992456"
                 placeholder="Message"
                 rows="4"
                 className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700"
