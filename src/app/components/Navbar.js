@@ -5,16 +5,20 @@ import React, { useState } from "react";
 import Logo from "../../../public/assets/Logo.png";
 import Image from "next/image";
 
+
+
 import {
   FaBars,
   FaArrowRight,
   FaBookReader,
   FaTimes,
 } from "react-icons/fa";
+import EnquiryForm from "./Enquiryfrom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  // const [showForm, setShowForm] = useState(false);
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
@@ -33,11 +37,11 @@ export default function Navbar() {
             </button>
 
             <div className="hidden md:block">
-              <Image src={Logo} alt="Logo" className="w-32 h-20 object-contain " />
+              <Image src={Logo} alt="Logo" className="w-32 h-32 object-contain " />
             </div>
           </div>
 
-          <ul className="hidden md:flex flex-row gap-6 w-[70%] justify-evenly lg:gap-12 text-md font-semibold text-gray-800  px-6  py-1 md:py-5 backdrop-blur  bg-white/30 border-2 border-white/80 rounded-full shadow-2xl">
+          <ul className="hidden md:flex flex-row gap-6 w-[55%] justify-evenly lg:gap-12 text-md font-semibold text-gray-800  px-6  py-1 md:py-5 backdrop-blur  bg-white/30 border-2 border-white/80 rounded-full shadow-2xl">
 
             <li
               onClick={() => {
@@ -79,14 +83,22 @@ export default function Navbar() {
 
             <li className="hover:text-blue-800 cursor-pointer">Contact Us</li>
           </ul>
-
-          <div className="hidden md:block">
+          {/* <EnquiryForm/> */}
+          <div onClick={toggleForm} className="hidden md:block">
             <button
-              onClick={toggleForm}
+
               className="cursor-pointer backdrop-blur-xl bg-gradient-to-r from-blue-800 to-blue-950 border-2 border-white/70 px-6 py-3 rounded-full text-white font-bold hover:scale-105 hover:shadow-2xl transition-all shadow-xl flex items-center gap-2"
             >
               Get Enquiry <FaArrowRight />
             </button>
+          </div>
+          <div>
+            {showForm ?
+              <div>
+                <EnquiryForm value={showForm} />
+              </div>
+              : null}
+
           </div>
 
           <div className="block md:hidden">
@@ -99,15 +111,12 @@ export default function Navbar() {
       </div>
 
       <div className="hidden md:block">
-        <button
-          onClick={toggleForm}
-          className="fixed top-80 right-0 z-50 h-[280px] w-[60px] backdrop-blur-xl bg-gradient-to-b from-purple-500 via-pink-500 to-red-500 border-2 border-white/50 rounded-l-3xl shadow-2xl flex flex-col items-center justify-center gap-3 hover:w-[70px] transition-all cursor-pointer group"
-        >
-          <div className="text-white font-black text-sm rotate-90 origin-center whitespace-nowrap tracking-wider drop-shadow-lg">QUICK ENQUIRY</div>
+        <button onClick={toggleForm}
+          className="fixed top-80 right-0 z-50 h-[280px] w-[60px] backdrop-blur-xl bg-gradient-to-b from-purple-500 via-pink-500 to-red-500 border-2 border-white/50 rounded-l-3xl shadow-2xl flex flex-col items-center justify-center gap-3 hover:w-[70px] transition-all cursor-pointer group">
+          <div className="text-white font-black text-sm rotate-90 origin-center whitespace-nowrap tracking-wider drop-shadow-lg">QUICK ENQUIRY </div>
         </button>
       </div>
 
-      <div className="h-[110px]"></div>
 
       <div
         className={`fixed top-0 left-0 h-full w-64 backdrop-blur-2xl bg-white/50 border-r-2 border-white/70 shadow-2xl z-50 transform ${isOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300`}
@@ -143,52 +152,6 @@ export default function Navbar() {
         <div className="fixed inset-0 bg-black/40 z-20" onClick={toggleSidebar}></div>
       )}
 
-      {showForm && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[100] p-4">
-          <div className="fixed z-[101] bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl w-[95%] max-w-lg p-6 border border-white/70">
-            <div className="flex justify-between items-center border-b pb-3 mb-4">
-              <h2 className="text-2xl font-bold text-blue-900">Get Enquiry</h2>
-              <button onClick={toggleForm} className="text-gray-600 text-2xl">
-                <FaTimes />
-              </button>
-            </div>
-
-            <form className="flex flex-col gap-4" onSubmit={ handleSubmit}>
-              <input
-                type="text"
-                placeholder="Your Name"
-                name="entry.2050310110"
-                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700"
-              />
-              <input
-                type="email"
-                name="entry.1252054791"
-                placeholder="Your Email"
-                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700"
-              />
-              <input
-                type="text"
-                name="entry.657967908"
-                placeholder="Phone Number"
-                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700"
-              />
-              <textarea
-                name="entry.156992456"
-                placeholder="Message"
-                rows="4"
-                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700"
-              ></textarea>
-
-              <button
-                type="submit"
-                className="bg-gradient-to-r from-blue-800 to-blue-950 text-white font-bold py-3 rounded-lg hover:scale-105 hover:shadow-2xl transition-all"
-              >
-                Submit Enquiry
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
     </>
   );
 }

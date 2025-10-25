@@ -12,7 +12,7 @@ const AboutUs = () => {
           className="p-5 ">
           <div  className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 p-3 lg:p-10 rounded-3xl backdrop-blur bg-white/35 border-2 border-white/80 shadow-xl">
 
-          <div className="relative flex justify-center items-center md:mt-10 lg:mt-0  rounded border-4 border-[#174181] h-[450px] md:h-[550px]">
+          <div className="relative flex justify-center items-center md:mt-10 lg:mt-0  rounded-[40px] bg-white h-[450px] md:h-[550px]">
 
             <Image src={aboutDb[0].Logo} alt="aboutbg" className="rounded-2xl h-[380px] w-[300px] md:h-[450px] md:w-[350px] lg:w-[480px] object-cover"/>
 
