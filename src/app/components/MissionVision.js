@@ -10,14 +10,14 @@ const MissionVision = () => {
 
     <div 
      key={item.id}
-    className="relative p-6 md:p-8 bg-[#e6f8ff]">
-      <div className="text-center relative z-10 mb-12">
+      className ="relative p-6 md:p-8 ">
+      <div  className="text-center relative z-10 mb-12">
         <div className="inline-block bg-[#174181] text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
           WHO WE ARE
         </div>
-        <h2 className="text-3xl  md:text-6xl font-bold text-red-700 mb-3">
+        <h1 className="text-3xl  md:text-6xl font-bold text-red-700 mb-3">
           Our Mission & Vision
-        </h2>
+        </h1>
         <p className="text-blue-600 text-base md:text-lg">
           Building tomorrow &apos;s leaders through excellence in education
         </p>
@@ -34,10 +34,10 @@ const MissionVision = () => {
         </div>
 
         <div className="w-full md:w-[800px] p-5 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold  text-[#c91e23] mb-4 flex items-center gap-2">
+          <h2 className="text-2xl md:text-3xl font-bold  text-[#c91e23] mb-4 flex items-center gap-2">
             Our Mission
             <span className="h-1 w-12 bg-gradient-to-r from-blue-500 rounded"></span>
-          </h3>
+          </h2>
           <p className="text-gray-600 text-base md:text-lg leading-relaxed">
             Our mission is to provide quality education that empowers students with
             knowledge, skills, and values to excel in their chosen paths.
@@ -75,10 +75,10 @@ const MissionVision = () => {
         </div>
 
         <div className="w-full md:w-[800px] p-5 md:p-8 ">
-          <h3 className="text-2xl md:text-3xl font-bold text-[#c91e23] mb-4 flex items-center gap-2">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#c91e23] mb-4 flex items-center gap-2">
             Our Vision
             <span className="h-1 w-12 bg-gradient-to-r from-blue-500 rounded"></span>
-          </h3>
+          </h2>
           <p className="text-gray-600 text-base md:text-lg leading-relaxed">
             Our vision is to be a leading educational institution recognized for
             nurturing intellectual curiosity, creativity, and global
@@ -97,9 +97,7 @@ const MissionVision = () => {
           </div>
 
         </div>
-        {/* <div className=" absolute right-1/3 top-0  ">
-          <Image className=" object-contain " src={Frame} alt="LineImg" />
-        </div> */}
+
       </div>
         </div>
       ))}

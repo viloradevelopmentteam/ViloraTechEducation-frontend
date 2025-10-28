@@ -3,9 +3,14 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { allCards } from "./DB/CardTypesDB";
 
-const CardTypes = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
 
+const CardTypes = () => {
+    const [showForm, setShowForm] = useState(false);
+
+  const toggleForm = () => setShowForm(!showForm);
+
+  
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const getCards = () => {
     if (selectedCategory =="All") {
       return Object.values(allCards).flat();
@@ -13,7 +18,7 @@ const CardTypes = () => {
     return allCards[selectedCategory];
   };
   return (
-    <div className=" w-full pb-10">
+     <div className="w-full pb-10">
       <div className="flex flex-col py-5 justify-center items-center space-y-5 w-full">
         <h1 className="text-4xl font-bold text-[#cf282e]">Popular Topics</h1>
 
@@ -35,6 +40,7 @@ const CardTypes = () => {
         </div>
       </div>
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-16 px-10 mt-10">
+          
         {getCards().map((card, index) => (
             <div key={index}
             className="relative flex w-80 flex-col rounded-xl backdrop-blur-2xl bg-white/40 border-2 border-white/80 text-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
@@ -68,6 +74,7 @@ const CardTypes = () => {
           </div>
         ))}
       </div>
+      
     </div>
   );
 };

@@ -10,7 +10,7 @@
 //   return ( 
 //       <div className="relative   px-4 sm:px-6 lg:px-8 py-12 lg:py-16 bg-gradient-to-tr from-white to-sky-100/60 ">
 //         <div className="grid lg:grid-cols-2 justify-items-center   ">
-          
+
 //           <div className="">
 //             <div className=" backdrop-filter backdrop-blur-xl shadow-lg border-2 border-white border-b border-r border-t-0 border-l-0  inline-flex items-center gap-2 bg-gray-100 text-[#174181] px-4 py-2 rounded-lg text-sm font-bold">
 //               {/* <Award className="w-4 h-4" /> */}
@@ -42,7 +42,7 @@
 //                 </div>
 //                 <p className="text-gray-700 font-medium">Learn at your own pace</p>
 //               </div>
-    
+
 //             </div>
 
 //             <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -52,7 +52,7 @@
 //               </button>
 //             </div>
 
- 
+
 //           </div>
 
 //           <div className="relativef flex flex-col gap-5">
@@ -70,18 +70,7 @@
 //               </div>
 //             </div>
 
-//              <div class="w-[500px] h-[150px] rounded-2xl bg-gray-50 shadow-md">
-//               <div className='px-5 pt-5 flex flex-row justify-between'>
-//                 <div className='flex flex-row gap-2'>
-//                   <div className='bg-red-400 w-[10px] h-[10px] rounded-full'/>
-//                   <div className='bg-yellow-400 w-[10px] h-[10px] rounded-full'/>
-//                   <div className='bg-green-400 w-[10px] h-[10px] rounded-full'/>
-//                 </div>
-//                  <div className='text-black/50 text-[15px]'>
-//                   bash
-//                 </div>
-//               </div>
-//             </div>
+
 
 //              <div class="w-[500px] h-[150px] rounded-2xl bg-gray-50 shadow-md">
 //               <div className='px-5 pt-5 flex flex-row justify-between'>
@@ -109,11 +98,11 @@
 
 import React from "react";
 import Image from "next/image";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaBook, FaUsers } from "react-icons/fa";
 import Robot from "../../../public/assets/Robot.png";
 
 const Herosection = () => {
-  
+
   return (
     <div className="relative px-4 sm:px-6 lg:px-8 md:py-12 lg:py-16">
       <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
@@ -122,11 +111,11 @@ const Herosection = () => {
             #1 LEARNING PLATFORM
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-blue-900">
+          <div className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-blue-900">
             Empowering the
             <span className="block text-red-700">Future through</span>
             <span className="block">Education!!!</span>
-          </h1>
+          </div>
 
           <p className="text-lg text-gray-700 leading-relaxed font-medium  w-[400px] md:w-full">
             Develop in-demand skills, boost your confidence, and make your mark in today&apos;s dynamic world.
@@ -156,11 +145,29 @@ const Herosection = () => {
           </div>
         </div>
 
-        <div className=" hidden md:block h-[700px] w-[600px] -mt-24 ">
+        {/* <div className=" hidden md:block h-[700px] w-[600px] -mt-24 ">
           <Image
             src={Robot} alt="Robot" className="w-full h-full object-cover  "
           />
+        </div> hidden md:block */}
+
+        <div className=" flex  justify-center  relative h-[700px] w-[650px] -mt-24">
+          <Image
+            src={Robot}
+            alt="Robot"
+            className="w-full h-full object-cover"
+          />
+
+          <div className="absolute left-1/2  backdrop-blur -top-5 w-12 h-12 bg-white/70 border border-white/80   p-2 rounded-xl ">
+            <FaBook className="text-[#286291] text-3xl " />
+          </div>
+
+          {/* <div className="absolute bottom-10 right-10 bg-white p-2 rounded-full shadow-lg">
+            <FaUsers className="text-green-500 w-6 h-6" />
+          </div> */}
+
         </div>
+
       </div>
 
 
@@ -180,61 +187,60 @@ export default Herosection;
 
 
 
-  //  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-5 bg-[#e6edf8] text-center">
-  //               <div className="flex flex-col items-center justify-center border-b md:border-b-0 md:border-r-2 border-gray-300 pb-4 md:pb-0">
-  //                   <div className="border-2 border-[#309ed1] p-2 rounded-full">
-  //                       <div className="bg-[#174181] rounded-full shadow-md p-2">
-  //                           <BiBarChartAlt2 className="text-3xl text-white" />
-  //                       </div>
-  //                   </div>
-  //                   <h2 className="text-xl md:text-2xl font-bold text-[#0d86be] mt-2">
-  //                       1000+
-  //                   </h2>
-  //                   <p className="text-gray-500 font-semibold text-sm">
-  //                       Total Courses
-  //                   </p>
-  //               </div>
+//  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-5 bg-[#e6edf8] text-center">
+//               <div className="flex flex-col items-center justify-center border-b md:border-b-0 md:border-r-2 border-gray-300 pb-4 md:pb-0">
+//                   <div className="border-2 border-[#309ed1] p-2 rounded-full">
+//                       <div className="bg-[#174181] rounded-full shadow-md p-2">
+//                           <BiBarChartAlt2 className="text-3xl text-white" />
+//                       </div>
+//                   </div>
+//                   <h2 className="text-xl md:text-2xl font-bold text-[#0d86be] mt-2">
+//                       1000+
+//                   </h2>
+//                   <p className="text-gray-500 font-semibold text-sm">
+//                       Total Courses
+//                   </p>
+//               </div>
 
-  //               <div className="flex flex-col items-center border-b md:border-b-0 md:border-r-2 border-gray-300 pb-4 md:pb-0">
-  //                   <div className="border-2 border-[#309ed1] p-2 rounded-full">
-  //                       <div className="bg-[#174181] rounded-full shadow-md p-2">
-  //                           <FaUsers className="text-3xl text-white" />
-  //                       </div>
-  //                   </div>
-  //                   <h2 className="text-xl md:text-2xl font-bold text-[#0d86be] mt-2">
-  //                       5,000
-  //                   </h2>
-  //                   <p className="text-gray-500 font-semibold text-sm">
-  //                       Total Students
-  //                   </p>
-  //               </div>
+//               <div className="flex flex-col items-center border-b md:border-b-0 md:border-r-2 border-gray-300 pb-4 md:pb-0">
+//                   <div className="border-2 border-[#309ed1] p-2 rounded-full">
+//                       <div className="bg-[#174181] rounded-full shadow-md p-2">
+//                           <FaUsers className="text-3xl text-white" />
+//                       </div>
+//                   </div>
+//                   <h2 className="text-xl md:text-2xl font-bold text-[#0d86be] mt-2">
+//                       5,000
+//                   </h2>
+//                   <p className="text-gray-500 font-semibold text-sm">
+//                       Total Students
+//                   </p>
+//               </div>
 
-  //               <div className="flex flex-col items-center border-r-0 md:border-r-2 border-gray-300">
-  //                   <div className="border-2 border-[#309ed1] p-2 rounded-full">
-  //                       <div className="bg-[#174181] rounded-full shadow-md p-2">
-  //                           <MdMenuBook className="text-3xl text-white" />
-  //                       </div>
-  //                   </div>
-  //                   <h2 className="text-xl md:text-2xl font-bold text-[#0d86be] mt-2">
-  //                       200+
-  //                   </h2>
-  //                   <p className="text-gray-500 font-semibold text-sm">Study Materials</p>
-  //               </div>
+//               <div className="flex flex-col items-center border-r-0 md:border-r-2 border-gray-300">
+//                   <div className="border-2 border-[#309ed1] p-2 rounded-full">
+//                       <div className="bg-[#174181] rounded-full shadow-md p-2">
+//                           <MdMenuBook className="text-3xl text-white" />
+//                       </div>
+//                   </div>
+//                   <h2 className="text-xl md:text-2xl font-bold text-[#0d86be] mt-2">
+//                       200+
+//                   </h2>
+//                   <p className="text-gray-500 font-semibold text-sm">Study Materials</p>
+//               </div>
 
-  //               <div className="flex flex-col items-center">
-  //                   <div className="border-2 border-[#309ed1] p-2 rounded-full">
-  //                       <div className="bg-[#174181] rounded-full shadow-md p-2">
-  //                           <FaUsers className="text-3xl text-white" />
-  //                       </div>
-  //                   </div>
-  //                   <h2 className="text-xl md:text-2xl font-bold text-[#0d86be] mt-2">
-  //                       100+
-  //                   </h2>
-  //                   <p className="text-gray-500 font-semibold text-sm">Expert Tutors</p>
-  //               </div>
-  //           </div>
-
-
+//               <div className="flex flex-col items-center">
+//                   <div className="border-2 border-[#309ed1] p-2 rounded-full">
+//                       <div className="bg-[#174181] rounded-full shadow-md p-2">
+//                           <FaUsers className="text-3xl text-white" />
+//                       </div>
+//                   </div>
+//                   <h2 className="text-xl md:text-2xl font-bold text-[#0d86be] mt-2">
+//                       100+
+//                   </h2>
+//                   <p className="text-gray-500 font-semibold text-sm">Expert Tutors</p>
+//               </div>
+//           </div>
 
 
- 
+
+
