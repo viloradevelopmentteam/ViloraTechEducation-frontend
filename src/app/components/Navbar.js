@@ -1,10 +1,8 @@
-
 "use client";
 
 import React, { useState } from "react";
 import Logo from "../../../public/assets/Logo.png";
 import Image from "next/image";
-
 
 
 import {
@@ -18,10 +16,10 @@ import EnquiryForm from "./Enquiryfrom";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  // const [showForm, setShowForm] = useState(false);
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+
   const toggleForm = () => {
     setShowForm(!showForm);
   };
@@ -41,49 +39,29 @@ export default function Navbar() {
             </div>
           </div>
 
-          <ul className="hidden md:flex flex-row gap-6 w-[55%] justify-evenly lg:gap-12 text-md font-semibold text-gray-800  px-6  py-1 md:py-5 backdrop-blur  bg-white/30 border-2 border-white/80 rounded-full shadow-2xl">
+          <ul className="hidden md:flex flex-row gap-6 w-[60%] justify-evenly lg:gap-12 text-md font-semibold text-gray-800  px-6  py-1 md:py-5 backdrop-blur  bg-sky-100/35 border-2 border-white/80 rounded-full shadow-2xl">
 
-            <li
-              onClick={() => {
-                document.getElementById("Home")?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="hover:text-blue-800 cursor-pointer"
-            >
-              Home
+            <li className="hover:text-blue-800 cursor-pointer">
+              <a href="#Home">Home</a>
             </li>
 
-
-            <li
-              onClick={() => {
-                document.getElementById("courses")?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="hover:text-blue-800 cursor-pointer"
-            >
-              Courses
+            <li className="hover:text-blue-800 cursor-pointer">
+              <a href="#courses">Courses</a>
             </li>
 
-
-            <li
-              onClick={() => {
-                document.getElementById("Mission & Vision")?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="hover:text-blue-800 cursor-pointer"
-            >
-              Mission & Vision
+            <li className="hover:text-blue-800 cursor-pointer">
+              <a href="#MissionVision">Mission & Vision</a>
             </li>
 
-            <li
-              onClick={() => {
-                document.getElementById("AboutUs")?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="hover:text-blue-800 cursor-pointer"
-            >
-              About Us
+            <li className="hover:text-blue-800 cursor-pointer">
+              <a href="#AboutUs">About Us</a>
             </li>
 
-            <li className="hover:text-blue-800 cursor-pointer">Contact Us</li>
+            <li className="hover:text-blue-800 cursor-pointer">
+              <a href="#Contact">Contact Us</a>
+            </li>
           </ul>
-          {/* <EnquiryForm/> */}
+          
           <div onClick={toggleForm} className="hidden md:block">
             <button
 
@@ -131,11 +109,11 @@ export default function Navbar() {
         </div>
 
         <ul className="flex flex-col mt-6 space-y-6 text-lg font-semibold px-6 text-gray-800">
-          <li className="hover:text-blue-800 cursor-pointer">Home</li>
-          <li className="hover:text-blue-800 cursor-pointer">Courses</li>
-          <li className="hover:text-blue-800 cursor-pointer">Mission & Vision</li>
-          <li className="hover:text-blue-800 cursor-pointer">About Us</li>
-          <li className="hover:text-blue-800 cursor-pointer">Contact Us</li>
+          <a href="#Home"><li className="hover:text-blue-800 cursor-pointer">Home</li></a>
+          <a href="#courses"><li className="hover:text-blue-800 cursor-pointer">Courses</li></a>
+          <a href="#MissionVision"><li className="hover:text-blue-800 cursor-pointer">Mission & Vision</li></a>
+          <a href="#AboutUs"><li className="hover:text-blue-800 cursor-pointer">About Us</li></a>
+          <a href="#Contact"><li className="hover:text-blue-800 cursor-pointer">Contact Us</li></a>
         </ul>
 
         <div className="px-6 mt-8">

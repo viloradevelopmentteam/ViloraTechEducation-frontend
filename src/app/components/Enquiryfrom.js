@@ -4,14 +4,12 @@ import React, { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 export default function EnquiryForm(props) {
 
-// console.log(props.name)
   const [showForm, setShowForm] = useState(props.value);
 
     const toggleForm = () => {
         console.log("hello")
     setShowForm(!showForm);
   };
-// Example using fetch
 const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -37,7 +35,7 @@ const handleSubmit = async (e) => {
 
   return (
     <>
-    {showForm?
+    {showForm? (
     
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[100] p-4">
       <div className="fixed z-[101] bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl w-[95%] max-w-lg p-6 border border-white/70">
@@ -83,8 +81,12 @@ const handleSubmit = async (e) => {
         </form>
       </div>
     </div>
-     :null}
-    
+        ):null}
+      
+
     </>
   );
 }
+
+
+

@@ -24,10 +24,10 @@ const MissionVision = () => {
       </div>
 
       <div className="flex flex-col md:flex-row items-center bg-white rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 hover:-translate-y-3 mb-10">
-        <div className="relative w-full md:w-1/2 h-[250px] md:h-[350px] object-cover">
+        <div className="relative  w-full md:w-1/2 h-[250px] md:h-[350px] object-cover">
           <Image src={missionvision[0].Missioncard1} alt="Missioncard1"   style={{ width: '100%', height: '100%', resizeMode: 'fit' }}/>
+         
           <div className="absolute  bottom-3 hidden md:block -right-8">
-  
           <Image src={missionvision[0].Missioncard2} alt="Missioncard1"  className="w-[160px]  h-[170px] border-4 border-slate-100 rounded-3xl object-cover shadow-xl"   />
 
           </div>
@@ -67,7 +67,7 @@ const MissionVision = () => {
          <Image src={missionvision[0].Visioncard1} alt="Visioncard1" className="object-cover w-full h-full" />
 
           </div>
-          <div className="absolute -left-10 md:-left-16 bottom-3 hidden md:block">
+          <div className="absolute -left-10 md:-left-10 bottom-3 hidden md:block">
    
          <Image src={missionvision[0]. Visioncard2} alt="Visioncard2" className="w-[170px]  h-[180px] border-4 border-slate-100 rounded-3xl object-cover shadow-xl" />
 
