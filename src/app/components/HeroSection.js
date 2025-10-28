@@ -95,16 +95,22 @@
 
 // export default Herosection;
 
-
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import { FaArrowRight, FaBook, FaUsers } from "react-icons/fa";
 import Robot from "../../../public/assets/Robot.png";
+import EnquiryForm from "./Enquiryfrom";
 
 const Herosection = () => {
+const [showForm, setShowForm] = useState(false);
 
+    const toggleForm = () => {
+        console.log("hello")
+    setShowForm(!showForm);
+  };
   return (
-    <div className="relative px-4 sm:px-6 lg:px-8 md:py-12 lg:py-16">
+    <div className="relative  px-4 sm:px-6 lg:px-8 md:py-12 lg:py-16">
       <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
         <div className=" space-y-6">
           <div className="backdrop-blur-2xl bg-white/60 shadow-2xl border-2 border-white/80 inline-flex items-center gap-2 px-6 py-3 rounded-2xl text-sm font-bold text-blue-700">
@@ -138,7 +144,7 @@ const Herosection = () => {
             ))}
           </div>
 
-          <div className="ml-20 md:ml-0">
+          <div onClick={toggleForm} className="ml-20 md:ml-0">
             <button className="flex flex-row items-center  gap-2 w-fit backdrop-blur-xl bg-gradient-to-r from-blue-800 to-blue-950 border-2 border-white/50 text-white px-6 py-2 md:px-10 md:py-3  rounded-full font-bold shadow-2xl hover:scale-105 hover:bg-blue-700 transition-all">
               GET ENQUIRY <FaArrowRight />
             </button>
@@ -170,6 +176,13 @@ const Herosection = () => {
 
       </div>
 
+
+
+        {showForm ?
+        <div>
+          <EnquiryForm value={showForm} />
+        </div>
+        :null}
 
     </div>
   );
