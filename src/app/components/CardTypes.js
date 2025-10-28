@@ -18,11 +18,11 @@ const CardTypes = () => {
     return allCards[selectedCategory];
   };
   return (
-     <div className="w-full pb-10">
-      <div className="flex flex-col py-5 justify-center items-center space-y-5 w-full">
+     <div className="w-full pb-10 bg-sky-100/50">
+      <div className="flex flex-col py-5 justify-center items-center  space-y-5 w-full">
         <h1 className="text-4xl font-bold text-[#cf282e]">Popular Topics</h1>
 
-        <div className="flex flex-wrap justify-center gap-4 p-1 w-full">
+        <div className="flex flex-wrap justify-center gap-4 p-1 w-full ">
           {["All", ...Object.keys(allCards)].map((category) => (
             <button
               key={category}
@@ -39,7 +39,7 @@ const CardTypes = () => {
           ))}
         </div>
       </div>
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-16 px-10 mt-10">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-8 gap-y-16 px-10 mt-10">
           
         {getCards().map((card, index) => (
             <div key={index}
@@ -56,7 +56,7 @@ const CardTypes = () => {
               >
                 <Image src={card.image} alt={card.title} style={{ width: '100%', height: '100%' }}/>
               </div>
-
+ 
             </div>
             <div className="p-6">
               <h5

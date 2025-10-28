@@ -155,8 +155,9 @@ const [showForm, setShowForm] = useState(false);
           <Image
             src={Robot} alt="Robot" className="w-full h-full object-cover  "
           />
-        </div> hidden md:block */}
+        </div> */}
 
+       <div className="hidden md:block ">
         <div className=" flex  justify-center  relative h-[700px] w-[650px] -mt-24">
           <Image
             src={Robot}
@@ -172,6 +173,7 @@ const [showForm, setShowForm] = useState(false);
             <FaUsers className="text-green-500 w-6 h-6" />
           </div> */}
 
+        </div>
         </div>
 
       </div>

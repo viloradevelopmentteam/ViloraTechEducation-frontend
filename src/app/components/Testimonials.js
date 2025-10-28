@@ -5,16 +5,15 @@ import { testimonialsDb } from "./DB/TestimonialsDb";
 const Testimonials = () => {
   return (
 
-    <div className=" flex flex-col pb-10 md:px-7 lg:px-8">
+    <div className=" flex flex-col pb-10 bg-blue-50 ">
       <h1 className="text-5xl font-bold text-[#d6181e] m-5 text-center"> Testimonials</h1>
 
-      <div className="flex flex-wrap gap-6 justify-cent">
+      <div className="flex flex-wrap gap-6   justify-center ">
         {testimonialsDb.map((item) => (
-          <div
-            key={item.id}
-            className="w-[420px] bg-gray-50 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-start items-start "
+          <div key={item.id}
+            className="w-[420px] bg-white/50 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-start items-start "
           >
-            <div className="px-5 pt-4 pb-2 w-full items-cente border border-gray-200">
+            <div className="px-5 pt-4 pb-2 w-full  border-b border-gray-200">
               <div className="flex gap-2">
                 <div className="bg-red-400 w-[10px] h-[10px] rounded-full"></div>
                 <div className="bg-yellow-400 w-[10px] h-[10px] rounded-full"></div>
